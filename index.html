@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Money Online</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #0044CC; /* Blue Background */
+            color: white;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 90%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: popUp 1s infinite alternate;
+        }
+        p {
+            font-size: 18px;
+            margin: 15px 0;
+            line-height: 1.4;
+        }
+        .features {
+            text-align: left;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .features p {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .features img {
+            width: 20px;
+            margin-right: 8px;
+        }
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            color: black;
+            padding: 10px 15px;
+            font-size: 18px;
+            border-radius: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 250px;
+            margin-top: 20px;
+            animation: popUp 1s infinite alternate;
+        }
+        .whatsapp-btn img {
+            width: 30px;
+            margin-right: 8px;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        /* Countdown Timer */
+        .countdown {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 15px;
+            display: none;
+            animation: countdownPop 1s infinite alternate;
+        }
+        @keyframes countdownPop {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.2); opacity: 0.8; }
+        }
+        /* Contact Us Button */
+        .contact-btn {
+            display: none;
+            background-color: #FFD700;
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 50px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+            margin-top: 15px;
+            animation: popUp 1s infinite alternate;
+        }
+        .contact-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        /* Button Animation */
+        @keyframes popUp {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>The best way to get rich, one step closer to success</h1>
+        <p>In 2025, more than 1,000,000 friends have joined us, and they can already use the new way of making money at home, which has successfully improved family life. What are you waiting for?</p>
+        
+        <div class="features">
+            <p><img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="✔"> 100% Money-making</p>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="✔"> Funds Withdrawable Anytime</p>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="✔"> Professional investment advisor</p>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="✔"> Consult now and start making money</p>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <button class="whatsapp-btn" onclick="startCountdown()">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Add WHATSAPP
+        </button>
+
+        <!-- Countdown Timer -->
+        <div class="countdown" id="countdown">3</div>
+
+        <!-- Contact Us Button -->
+        <a href="https://wa.me/919876543210" class="contact-btn" id="contact-btn">Contact Us</a>
+    </div>
+
+    <script>
+        function startCountdown() {
+            document.querySelector(".whatsapp-btn").style.display = "none";
+            let countdownElement = document.getElementById("countdown");
+            countdownElement.style.display = "block";
+
+            let count = 3;
+            let interval = setInterval(() => {
+                count--;
+                countdownElement.innerText = count;
+                if (count === 0) {
+                    clearInterval(interval);
+                    countdownElement.style.display = "none";
+                    document.getElementById("contact-btn").style.display = "block";
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
